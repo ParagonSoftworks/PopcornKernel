@@ -3,7 +3,7 @@
 
 
 
-The Popcorn kernal is the OS kernal for the upcoming KUDOS Project.
+The Popcorn Kernel is the OS Kernel for the upcoming KudOS Project.
 
 
-We have put the code on github so that our communitee can support us 
+We have put the source code on GitHub so that our community can support us with adding features and fixing bugs via pull requests.
