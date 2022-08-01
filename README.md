@@ -23,4 +23,4 @@ Unsupported Machines: All EFI Mac Machines and All Apple Silicon Machines.
 
 Untested Machines: EFI PCs, Mac Machines that are able to boot BIOS and other machines.
 
-Note: We are never going to support Apple Silicon as that is next to impossible to code for and none of us have a Silicon Machine. If you want an OS that runs on Silicon then just use macOS or even Asahi Linux. This project is staying as a x86_64 project for now.
+Note: We are never going to support Apple Silicon as that is next to impossible to code for and none of us have a Silicon Machine. If you want an OS that runs on Silicon then just use macOS or even Asahi Linux. This project is staying as a x86_64 Intel and AMD supported project for now.
