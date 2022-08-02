@@ -20,7 +20,7 @@ as this may cause issues.
 
 Supported and Tested Virtualization Software so far: QEMU/QtEmu/UTM (anything that runs on QEMU), VirtualBox and VMware.
 
-Supported and Tested Machines: Toshiba Chromebook 2 using MrChromebox SeaBIOS.
+Supported and Tested Machines: Toshiba Chromebook 2 using MrChromebox SeaBIOS and Acer Aspire One DXXX Models.
 
 Unsupported Machines: All EFI Mac Machines and All Apple Silicon Machines.
 
