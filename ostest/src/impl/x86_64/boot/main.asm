@@ -1,15 +1,36 @@
 global start
+; just so it can switch to 64 later
 extern long_mode_start
 
 section .text
+; proper 32 bit mode
 bits 32
 start:
    mov esp, stack_top
+   
+
+    ; a bunch of dumb checks
+    ; a lot of this is gonna be
+    ; removed for the 32 bit release
+
+    ; why do we even need to
+    ; check that booted it
+    ; from multiboot it's not
+    ; something bads gonna happen
 
     call check_multiboot
+    
+
+    ; 64 bit mode checks
+
     call check_cpuid
     call check_long_mode
     
+    ; if checks succeed then
+    ; we setup paging to allow
+    ; all 64 bit capabilities
+    ; to work
+
     call setup_page_tables
     call enable_paging
 
@@ -24,6 +45,9 @@ start:
       mov al, "M"
       jmp error
 
+
+; this is just pushing a flag to 1 slowly
+; and then hoping the cpu doesn't set it to 0
 check_cpuid:
     pushfd
     pop eax
@@ -42,6 +66,7 @@ check_cpuid:
     mov al, "C"
     jmp error
   
+; needed for 64 bit
 check_long_mode:
     mov eax, 0x80000000
     cpuid
@@ -57,6 +82,7 @@ check_long_mode:
       mov al, "L"
       jmp error
 
+; page table cache go brrrrr
 setup_page_tables:
     mov eax, page_table_l3
     or eax, 0b11 ; present, writable
@@ -84,10 +110,15 @@ enable_paging:
     mov eax, page_table_l4
     mov cr3, eax
 
-    ; enable PAE
+    ; enable Physical Address Extension?
+    ; i think it's called that...
     mov eax, cr4
     or eax, 1 << 5
     mov cr4, eax
+    
+    ; these two enable areas
+    ; are where the fun really
+    ; starts lol
 
     ; enable long mode
     mov ecx, 0xC0000080
@@ -102,13 +133,18 @@ enable_paging:
 
     ret
 error:
-    ; print "ERR: X" where X is the error code
+    ; essentially these dwords are spelling ERR
+    ; while the byte is the one letter code
+    ; just look at areas that mention "mov al, "
+    ; in them and you'll understand why we
+    ; need the byte.
     mov dword [0xb8000], 0x4f524f45
     mov dword [0xb8004], 0x4f3a4f52
     mov dword [0xb8008], 0x4f204f20
     mov byte  [0xb800a], al
     hlt 
 
+; mainly some reserving and aligning of memory
 section .bss
 align 4096
 page_table_l4:
