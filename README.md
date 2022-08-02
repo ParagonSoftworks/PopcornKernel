@@ -15,6 +15,9 @@ We also have plans to make the kernel accessible via 32-bit machines too as righ
 Just head into the "ostest" folder to get started!
 You will see a help file explaining what the folders are for.
 
+Also make sure to delete the readmes from your own copy when compiling
+as this may cause issues.
+
 Supported and Tested Virtualization Software so far: QEMU/QtEmu/UTM (anything that runs on QEMU), VirtualBox and VMware.
 
 Supported and Tested Machines: Toshiba Chromebook 2 using MrChromebox SeaBIOS.
