@@ -23,8 +23,12 @@ We at Paragon Softworks have decided to put out a List of fetures that the Kerne
 The List includes:
 
 The kernal having a recovery shell.
+
 The kernal having a easy to understand crash screen with readable reasons to why the system crashed.
+
 The kernal using nesting cpu scheduler as a base to make the kernal stable and get the most out of your system.
+
 The kernal being easy to modify and customize for maximum compatability with software and hardware.(vt-d etc.)
+
 
 
