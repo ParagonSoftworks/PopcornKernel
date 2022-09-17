@@ -18,14 +18,13 @@ as this may cause issues.
 
 Supported and Tested Virtualization Software so far: QEMU/QtEmu/UTM (a lot of apps that run on QEMU), VirtualBox and VMware.
 
-Unsupported Virtualization Software so far: Virtual x86 on copy.sh/v86 (No Long Mode Support)
+We at Paragon Softworks have decided to put out a List of fetures that the Kernel should support.
+  
+The List includes:
 
-Supported and Tested Machines: Toshiba Chromebook 2 using MrChromebox SeaBIOS and Acer Aspire One DXXX Models.
+The kernal having a recovery shell.
+The kernal having a easy to understand crash screen with readable reasons to why the system crashed.
+The kernal using nesting cpu scheduler as a base to make the kernal stable and get the most out of your system.
+The kernal being easy to modify and customize for maximum compatability with software and hardware.(vt-d etc.)
 
-Unsupported Machines: All EFI Mac Machines (Doesn't show up), All EFI PCs (Doesn't show up) and All Apple Silicon Machines (Too hard to code for).
 
-Untested Machines: Mac Machines that are able to boot BIOS (Don't have any) and other machines.
-
-Note: We are never going to support Apple Silicon as that is next to impossible to code for and none of us have a Silicon Machine. If you want an OS that runs on Silicon then just use macOS or even Asahi Linux. ~~This project is staying as a x86 x64 Intel and AMD supported project for now.~~
-
-Another Note: We have plans to support ARM. We don't know when.
