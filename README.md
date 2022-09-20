@@ -2,6 +2,7 @@
 
 
 
+AFellowSpeedrunner/MrMasterKeyboard:
 
 The Popcorn Kernel is the OS Kernel for the upcoming KudOS Project.
 
@@ -16,19 +17,19 @@ You will see a help file explaining what the folders are for.
 Also make sure to delete the readmes from your own copy when compiling
 as this may cause issues.
 
-Supported and Tested Virtualization Software so far: QEMU/QtEmu/UTM (a lot of apps that run on QEMU), VirtualBox and VMware.
+LisieDoesCode:
 
-We at Paragon Softworks have decided to put out a List of fetures that the Kernel should support.
+We at Paragon Softworks have decided to put out a list of features that the kernel should support.
   
-The List includes:
+The list includes:
 
-The kernal having a recovery shell.
+The kernel having a recovery shell.
 
-The kernal having a easy to understand crash screen with readable reasons to why the system crashed.
+The kernel having a easy to understand crash screen with readable reasons to why the system crashed.
 
-The kernal using nesting cpu scheduler as a base to make the kernal stable and get the most out of your system.
+The kernel using nesting cpu scheduler as a base to make the kernal stable and get the most out of your system.
 
-The kernal being easy to modify and customize for maximum compatability with software and hardware.(vt-d etc.)
+The kernel being easy to modify and customize for maximum compatability with software and hardware.(vt-d etc.)
 
 
 
