@@ -1,6 +1,6 @@
 # PopcornKernel
 
-### Development has been halted until further notice.
+### Development has been halted indefinitely.
 
 PopcornKernel is the kernel for the upcoming KudOS operating system project. The source code is available on GitHub for community support and contributions through pull requests.
 
